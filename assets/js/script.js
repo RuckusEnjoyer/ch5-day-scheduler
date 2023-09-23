@@ -29,7 +29,8 @@ $(function () {
       $(this).removeClass('past present').addClass('future');
     }
   });
-
+  
+  //load the localStorage stuff
   $('.time-block').each(function() {
     var parentElement = $(this).children('textarea'); 
     var id = $(this).attr('id'); 
