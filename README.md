@@ -14,3 +14,5 @@ The date is listed in the header of the website, and underneath are nine boxes, 
 The HTML and CSS for this application was provided by edX. 
 
 ## Link
+
+https://ruckusenjoyer.github.io/ch5-day-scheduler/
