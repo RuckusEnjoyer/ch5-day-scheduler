@@ -16,6 +16,27 @@ $(function () {
     localStorage.setItem(id, value);
   });
 
+  //change the time color for the calender blocks
+  $('.time-block').each(function() {
+    var timeText = $(this).children('div');
+    var time = parseInt(timeText.text());
+
+    if (time === dayjs().hour()) {
+      $(this).removeClass('past future').addClass('present');
+    } else if (time < dayjs().hour()) {
+      $(this).removeClass('present future').addClass('past');
+    } else {
+      $(this).removeClass('past present').addClass('future');
+    }
+  });
+
+  $('.time-block').each(function() {
+    var parentElement = $(this).children('textarea'); 
+    var id = $(this).attr('id'); 
+    var savedData = localStorage.getItem(id);
+  
+    parentElement.text(savedData);
+  });
 
 });
 
